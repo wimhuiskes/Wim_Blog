@@ -14,6 +14,10 @@
  *= require_self
  */
  @import 'normalize';
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+
 
  html, body {
 	font-family: 'Raleway', sans-serif;
@@ -31,7 +35,7 @@ a {
 #sidebar {
 	width: 250px;
 	position: fixed;
-	left: 0;
+	left: 0%;
 	top: 0;
 	height: 100%;
 	background: #f5f7f9;
@@ -54,7 +58,7 @@ a {
 			font-weight: 700;
 			font-size: 0.7em;
 			text-transform: uppercase;
-			color: #33acb7;
+			color: #eb1414;
 		}
 		li {
 			padding: .5em 0;
@@ -119,6 +123,14 @@ a {
 			color: #9eafba;
 			text-decoration: none;
 		}
+		.nav_btn {
+			display: none;
+			float: right;
+			color: #eb1414;
+		}
+		.nav_btn:hover {
+			 cursor: pointer;
+		}
 		.buttons {
 			float: right;
 			margin-top: -6px;
@@ -139,7 +151,7 @@ a {
 				color: #2a2f35;
 				font-size: 1.5em;
 				&:hover {
-					color: #33acb7;
+					color: #eb1414;
 				}
 			}
 		}
@@ -211,24 +223,31 @@ a {
 	#page_wrapper {
 		padding: 3em;
 		#profile_image {
-			width: 300px;
+			width: 100%;
 			float: left;
 			margin-right: 2em;
+			margin-bottom: 25px;
 			img {
-				width: 100%;
+				width: 125px;
 				border-radius: 0.35em;
+				margin: 0 auto;
+				display: block;
 			}
 		}
 		#content {
+			max-width: 600px;
+			margin: 0 auto;
 			h1 {
 				font-weight: 500;
+				text-align: center;
 			}
 			p {
 				font-size: 1.1em;
 				line-height: 1.75;
+				text-align: center;
 			}
 			a {
-				color: #33acb7;
+				color: #eb1414;
 				font-weight: 700;
 				text-decoration: none;
 			}
@@ -265,3 +284,30 @@ a {
 		}
 	}
 }
+
+@media only screen and (max-width: 768px){
+	#sidebar{
+		left: -100%;
+	}
+	#main_content {
+		margin-left: 0px;
+	#header {
+		padding: 1em 1em;
+		border-bottom: 1px solid #d6dce0;
+		background: #f5f7f9;
+		color: #9eafba;
+		.nav_btn{
+			display: inline;
+		}
+	}
+	}
+}
+
+@media screen and (min-width: 768px) {
+    #sidebar{
+         left: 0% !important;
+    }
+}
+
+//#33acb7
+
